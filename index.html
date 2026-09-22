@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página inspirada na página inicial da Netflix para o trabalho G1 de Front-End.">
+    <title>Netflix — Filmes e séries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a class="logo" href="#" aria-label="Netflix - página inicial">NETFLIX</a>
+
+        <nav class="navegacao" aria-label="Navegação principal">
+            <a href="#inicio">Início</a>
+            <a href="#motivos">Motivos</a>
+            <a href="#faq">Perguntas</a>
+        </nav>
+
+        <a class="botao-entrar" href="#cadastro">Entrar</a>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-conteudo">
+                <p class="etiqueta">STREAMING • ENTRETENIMENTO</p>
+                <h1>Filmes, séries e muito mais, sem limites</h1>
+                <p class="subtitulo">Assista onde quiser. Cancele quando quiser.</p>
+                <p class="descricao">
+                    Entre no mundo do entretenimento e descubra histórias para todos os momentos.
+                </p>
+
+                <form class="formulario" id="cadastro" novalidate>
+                    <label for="email">Quer assistir? Informe seu e-mail para começar.</label>
+                    <div class="formulario-linha">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Endereço de e-mail"
+                            autocomplete="email"
+                            required
+                        >
+                        <br> <br>
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Senha"
+                            autocomplete="current-password"
+                            required
+                        >
+                        <br> <br>
+                        <button type="submit">Vamos lá</button>
+                    </div>
+                    <p class="mensagem" id="mensagem" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+
+
+
+        <section class="secao" id="motivos">
+            <div class="secao-titulo">
+                <p class="etiqueta">POR QUE ASSINAR?</p>
+                <h2>Mais motivos para assistir</h2>
+            </div>
+
+            <div class="cartoes">
+                <article class="cartao">
+                    <span class="icone" aria-hidden="true">▣</span>
+                    <h3>Aproveite na TV</h3>
+                    <p>Assista em Smart TVs, notebooks, celulares, tablets e outros dispositivos.</p>
+                </article>
+
+                <article class="cartao">
+                    <span class="icone" aria-hidden="true">↓</span>
+                    <h3>Assista offline</h3>
+                    <p>Tenha seus títulos favoritos disponíveis para acompanhar quando quiser.</p>
+                </article>
+
+                <article class="cartao">
+                    <span class="icone" aria-hidden="true">♡</span>
+                    <h3>Escolha seus favoritos</h3>
+                    <p>Encontre filmes e séries para diferentes estilos, humores e momentos.</p>
+                </article>
+
+                <article class="cartao">
+                    <span class="icone" aria-hidden="true">☆</span>
+                    <h3>Perfis para todos</h3>
+                    <p>Crie experiências personalizadas para cada pessoa da família.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao catalogo" aria-labelledby="catalogo-titulo">
+            <div class="secao-titulo">
+                <p class="etiqueta">EM ALTA</p>
+                <h2>Descubra sua próxima história</h2>
+            </div>
+
+            <div class="grade-filmes">
+                <article class="filme filme-1">
+                    <span>01</span>
+                    <h3>Romance</h3>
+                </article>
+                <article class="filme filme-2">
+                    <span>02</span>
+                    <h3>Drama</h3>
+                </article>
+                <article class="filme filme-3">
+                    <span>03</span>
+                    <h3>Suspense</h3>
+                </article>
+                <article class="filme filme-4">
+                    <span>04</span>
+                    <h3>Ficção científica</h3>
+                </article>
+                <article class="filme filme-5">
+                    <span>05</span>
+                    <h3>Ação</h3>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao faq" id="faq">
+            <div class="secao-titulo">
+                <p class="etiqueta">DÚVIDAS</p>
+                <h2>Perguntas frequentes</h2>
+            </div>
+
+            <div class="perguntas">
+                <details>
+                    <summary>O que é a Netflix?</summary>
+                    <p>A Netflix é um serviço de streaming com filmes, séries e documentários para assistir pela internet.</p>
+                </details>
+
+                <details>
+                    <summary>Onde posso assistir?</summary>
+                    <p>Você pode assistir em computadores, celulares, tablets, Smart TVs e outros dispositivos compatíveis.</p>
+                </details>
+
+                <details>
+                    <summary>Posso cancelar quando quiser?</summary>
+                    <p>Sim. O serviço permite o cancelamento online da assinatura.</p>
+                </details>
+
+                <details>
+                    <summary>Existe conteúdo para crianças?</summary>
+                    <p>Sim. A plataforma possui uma experiência infantil e recursos de controle parental.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="personalizacao" aria-labelledby="sobre-titulo">
+            <div>
+                <p class="etiqueta">PERSONALIZAÇÃO</p>
+                <h2 id="sobre-titulo">Sobre este clone</h2>
+                <p>
+                    Esta seção foi criada especialmente para o trabalho G1 e não faz parte da página
+                    de referência. O objetivo é demonstrar uma personalização própria.
+                </p>
+            </div>
+            <span class="assinatura">AL • 2026</span>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Projeto acadêmico de Front-End • Ana Luisa e Mateus Vicente • 2026</p>
+        <div>
+            <a href="#inicio">Início</a>
+            <a href="#faq">Ajuda</a>
+        </div>
+    </footer>
+
+    <script>
+        const formulario = document.querySelector("#cadastro");
+        const email = document.querySelector("#email");
+        const mensagem = document.querySelector("#mensagem");
+
+        formulario.addEventListener("submit", function (evento) {
+            evento.preventDefault();
+
+            if (!email.checkValidity()) {
+                mensagem.textContent = "Digite um endereço de e-mail válido.";
+                mensagem.classList.add("erro");
+                return;
+            }
+
+            mensagem.textContent = "E-mail recebido! Esta é uma simulação acadêmica.";
+            mensagem.classList.remove("erro");
+            formulario.reset();
+        });
+    </script>
+</body>
+</html>
