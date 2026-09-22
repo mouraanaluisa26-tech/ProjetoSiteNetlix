@@ -1,0 +1,429 @@
+:root {
+    --preto: #050505; /* motivos e sobre esseclone */
+    --preto-suave: #111111;
+    --cinza: #f70404;
+    --cinza-claro: #b3b3b3; /* entre no mundo... */
+    --branco: #ffffff; /* as parte que chama a atenção */
+    --vermelho: #e50914; /* botões para avançar */
+    --vermelho-escuro: #b20710;/* quado vai clicar nos botões */
+    --raio: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--preto);
+    color: var(--branco);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cabecalho {
+    align-items: center;
+    background: rgba(5, 5, 5, 0.95); /* barra de cima */
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: var(--vermelho);
+    font-size: 1.55rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.navegacao {
+    display: none;
+    gap: 1.5rem;
+}
+
+.navegacao a {
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+.navegacao a:hover,
+.rodape a:hover {
+    color: var(--vermelho);
+}
+
+.botao-entrar,
+.formulario button {
+    background: var(--vermelho);
+    border: 0;
+    border-radius: 5px;
+    color: var(--branco);
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0.65rem 1rem;
+}
+
+.botao-entrar:hover,
+.formulario button:hover {
+    background: var(--vermelho-escuro);
+}
+
+.hero {
+     align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.05)
+        ),
+        url("fotodefundo.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    min-height: 75vh;
+    padding: 4rem 5%;
+}
+
+.hero-conteudo {
+    max-width: 720px;
+}
+
+.etiqueta {
+    color: #d9d9d9;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    margin-bottom: 0.7rem;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 8vw, 5rem);
+    line-height: 0.98;
+    margin-bottom: 1.2rem;
+    max-width: 800px;
+}
+
+.subtitulo {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.descricao {
+    color: var(--cinza-claro);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.formulario {
+    max-width: 700px;
+}
+
+.formulario label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+}
+
+.formulario-linha {
+    flex-direction: column;
+    max-width: 200px;
+}
+
+.formulario input {
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid #777;
+    border-radius: 5px;
+    color: var(--branco);
+    font-size: 1rem;
+    min-height: 52px;
+    padding: 0.8rem 1rem;
+}
+
+.formulario input:focus {
+    border-color: var(--branco);
+    outline: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.formulario button {
+    min-height: 52px;
+    font-size: 1rem;
+}
+
+.mensagem {
+    margin-top: 0.7rem;
+    color: #8cffb0;
+}
+
+.mensagem.erro {
+    color: #ff7c7c;
+}
+
+.secao {
+    border-top: 8px solid #b41818;/*tiras entre as partes da net*/
+    padding: 4rem 5%;
+}
+
+.secao-titulo {
+    margin-bottom: 2rem;
+}
+
+.secao-titulo h2 {
+    font-size: clamp(1.8rem, 5vw, 2.7rem);
+}
+
+.cartoes {
+    display: grid;
+    gap: 1rem;
+}
+
+.cartao {
+    background: linear-gradient(145deg, #0e105c, #101010);/*cor dos cartões de baixar e onde assistir */
+    border: 1px solid #333;
+    border-radius: var(--raio);
+    min-height: 220px;
+    padding: 1.5rem;
+}
+
+.cartao:hover {
+    transform: translateY(-3px);
+    transition: transform 0.2s ease;
+}
+
+.icone {
+    display: block;
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+}
+
+.cartao h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.cartao p {
+    color: var(--cinza-claro);
+}
+
+.catalogo {
+    background: #080808;/*fundo das categorias */
+}
+
+.grade-filmes {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.filme {
+    align-items: flex-end;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 230px;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+    background-size: cover;/*para que a imagen fique completa na partede de categoria */
+    background-position: center;
+}
+
+.filme::before {
+    background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.9));
+    content: "";
+    inset: 0;
+    position: absolute;
+}
+
+.filme span,
+.filme h3 {
+    position: relative;
+    z-index: 1;
+}
+
+.filme span {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.filme h3 {
+    align-self: flex-start;
+    font-size: 1.1rem;
+}
+
+.filme-1 { background-image: url("titanic.jpg"); }  
+.filme-2 { background-image: url("thewalkingdead.jpg"); }  
+.filme-3 { background-image: url("Wandinha.jpg"); }
+.filme-4 { background-image: url("strangerthings.jpg"); }
+.filme-5 { background-image: url("lacasadepapel.jpg"); }
+
+.faq {
+    background: #111;
+}
+
+.perguntas {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.perguntas details {
+    background: #2d2d2d;
+}
+
+.perguntas summary {
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 700;
+    list-style: none;
+    padding: 1.2rem;
+}
+
+.perguntas summary::after {
+    content: "+";
+    float: right;
+    font-size: 1.4rem;
+}
+
+.perguntas details[open] summary::after {
+    content: "×";
+}
+
+.perguntas details p {
+    border-top: 1px solid #111;
+    color: #ddd;
+    padding: 1.2rem;
+}
+
+.personalizacao {
+    align-items: center;
+    border-top: 8px solid #191919;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 4rem 5%;
+}
+
+.personalizacao h2 {
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+}
+
+.personalizacao p:not(.etiqueta) {
+    color: var(--cinza-claro);
+    max-width: 700px;
+}
+
+.assinatura {
+    border: 1px solid #555;
+    border-radius: 100%;
+    display: grid;
+    height: 100px;
+    min-width: 100px;
+    place-items: center;
+    width: 100px;
+}
+
+.rodape {
+    border-top: 1px solid #333;
+    color: #888;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 5%;
+}
+
+.rodape div {
+    display: flex;
+    gap: 1rem;
+}
+
+.rodape a {
+    color: #aaa;
+}
+
+@media (min-width: 768px) {
+    .cabecalho {
+        padding: 1.2rem 6%;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .navegacao {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 82vh;
+        padding: 6rem 8%;
+    }
+
+    .formulario-linha {
+        flex-direction: row;
+    }
+
+    .formulario input {
+        flex: 1;
+    }
+
+    .formulario button {
+        min-width: 130px;
+    }
+
+    .cartoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grade-filmes {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .filme {
+        min-height: 330px;
+    }
+
+    .personalizacao {
+        flex-direction: row;
+        padding: 5rem 8%;
+    }
+
+    .rodape {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 8%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .cartoes {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero-conteudo {
+        padding-left: 2rem;
+    }
+
+    .secao {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+}
