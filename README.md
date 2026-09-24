@@ -13,7 +13,7 @@
 
 A referência escolhida foi a página inicial da Netflix Brasil.
 
-A escolha foi feita porque a página possui uma estrutura visual clara, com cabeçalho, chamada principal, formulário de e-mail, seções de conteúdo e perguntas frequentes. Isso permite reproduzir os conceitos solicitados no trabalho sem depender de interações complexas de JavaScript.
+A escolha foi feita porque a página possui cabeçalho, chamada principal, formulário de e-mail, seções de conteúdo e perguntas frequentes. 
 
 A página original apresenta uma chamada para o usuário informar o e-mail para começar, uma área de conteúdos em destaque, motivos para utilizar o serviço e perguntas frequentes.
 
@@ -21,12 +21,12 @@ A página original apresenta uma chamada para o usuário informar o e-mail para 
 
 ## 1.1 Estrutura HTML semântica e acessível
 
-- [x] `header`
-- [x] `nav`
-- [x] `main`
-- [x] `section`
-- [x] `article`
-- [x] `footer`
+- [x] `header`: Cabeçalho
+- [x] `nav` : Liks de  navegação 
+- [x] `main` : Conteudo da página 
+- [x] `section` : Divide o conteúdo em partes  
+- [x] `article` : Contúdo individual dentro da uma seção 
+- [x] `footer` : Rodapé
 - [x] Formulário com `label` associado ao campo
 - [x] Campo de e-mail com `type="email"`
 - [x] Navegação com `aria-label`
@@ -53,10 +53,7 @@ O formulário possui uma `label` associada ao campo de e-mail através dos atrib
 
 ### Justificativa
 
-A página foi construída observando a organização visual da página de referência, sem copiar o código-fonte original. Foram reproduzidos conceitos visuais como fundo escuro, vermelho como cor de destaque, tipografia de grande impacto, formulário de e-mail e divisão do conteúdo em blocos.
-
-Pequenas diferenças foram feitas para adaptar a interface ao objetivo acadêmico e demonstrar conhecimentos de HTML, CSS e JavaScript.
-
+A página foi construída observando a organização visual da página de referência, sem copiar o código-fonte original. Foram reproduzidos conceitos visuais como fundo escuro, vermelho como cor de destaque, tipografia de grande impacto, formulário de e-mail e divisão do conteúdo em blocos.Pequenas diferenças foram feitas.
 ---
 
 ## 1.3 CSS: seletores, box model e variáveis
@@ -72,7 +69,7 @@ Pequenas diferenças foram feitas para adaptar a interface ao objetivo acadêmic
 
 Foram utilizadas classes para organizar os componentes, seletores descendentes para estilizar elementos dentro de determinados componentes e pseudo-classes para estados de interação.
 
-O box model foi utilizado através de `padding`, `margin`, `border`, `width` e `height`. As principais cores e valores reutilizados foram definidos em `:root` através de variáveis CSS, como `--preto`, `--branco` e `--vermelho`.
+O box model foi utilizado através de `padding`(espaço dentreo do elemento), `margin`(espaço forado elemento), `border`(borda do elemento), `width`(largura) e `height`(altura). As principais cores e valores reutilizados foram definidos em `:root` através de variáveis CSS, como `--preto`, `--branco`, `--vermelho` e `--azul`.
 
 ---
 
@@ -108,56 +105,7 @@ Foi criada uma seção chamada "Sobre este clone", que não faz parte da referê
 # JavaScript
 
 Foi utilizado JavaScript básico no formulário.
-
 Quando o usuário envia um e-mail inválido, uma mensagem de erro é exibida. Quando o e-mail é válido, o formulário apresenta uma mensagem informando que o cadastro foi recebido. Como este é um projeto acadêmico, não existe conexão com um sistema real de cadastro.
-
----
-
-# Organização dos arquivos
-
-```text
-trabalho_g1_frontend/
-│
-├── index.html
-├── style.css
-└── README.md
-```
-
-Os arquivos principais foram mantidos exatamente com os nomes solicitados no enunciado.
-
----
-
-# Commits
-
-O professor solicita pelo menos 8 commits distribuídos em pelo menos 3 dias diferentes.
-
-Sugestão de histórico:
-
-1. `cria estrutura inicial do projeto`
-2. `adiciona estrutura semantica do header e hero`
-3. `adiciona formulario de email`
-4. `cria secao de motivos para assistir`
-5. `adiciona catalogo visual de filmes`
-6. `cria perguntas frequentes e rodape`
-7. `adiciona responsividade mobile first`
-8. `adiciona personalizacao e documentacao`
-
-**Importante:** os commits devem ser realizados em dias diferentes durante o desenvolvimento. Não faça os oito commits de uma vez no último dia.
-
----
-
-# Validação
-
-Antes da entrega:
-
-- Validar o HTML no https://validator.w3.org/
-- Abrir a página em uma largura semelhante à de um celular
-- Abrir a página em uma largura semelhante à de um desktop
-- Conferir o formulário
-- Tirar prints comparando a página desenvolvida com a referência
-- Conferir se os três arquivos estão na raiz do repositório
-- Preencher a matrícula
-- Enviar o link do repositório pelo AVA
 
 ---
 
